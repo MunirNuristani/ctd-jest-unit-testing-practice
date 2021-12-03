@@ -26,11 +26,19 @@ describe('Test getting the first string from an array', () => {
     });
     test('Returns null for an empty array', () => {
         // Write your test code here
+        const emptyArr= []
+        expect(utils.getFirstStringFromArray(emptyArr)).toBeNull()
+        
     });
     test('Returns null if no strings are in the array', () => {
         // Write your test code here
+        const numList = [1,2,3,4,5]
+        expect(utils.getFirstStringFromArray(numList)).toBeNull()
+        
     });
     test('Returns the second item if the first item is a number', () => {
         // Write your test code here
+        const mixArr = [1, 'next', 4, 'back']
+        expect (utils.getFirstStringFromArray(mixArr)). toBe('next')
     });
 });
